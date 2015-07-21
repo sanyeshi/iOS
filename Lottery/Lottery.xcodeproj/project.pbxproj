@@ -83,6 +83,8 @@
 		7C11E4CE1B3ED66F000B4896 /* LuckyBackground@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C11E4CC1B3ED66F000B4896 /* LuckyBackground@2x.jpg */; };
 		7C11E4D01B3EE0A2000B4896 /* ToolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C11E4CF1B3EE0A2000B4896 /* ToolView.xib */; };
 		7C11E4D81B3EE551000B4896 /* ToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C11E4D71B3EE551000B4896 /* ToolView.m */; };
+		7CE5A03A1B5E2BFD00DD4D33 /* LuckDialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE5A0391B5E2BFD00DD4D33 /* LuckDialView.m */; };
+		7CE5A03D1B5E385D00DD4D33 /* LuckDialButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE5A03C1B5E385D00DD4D33 /* LuckDialButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -216,6 +218,10 @@
 		7C11E4CF1B3EE0A2000B4896 /* ToolView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToolView.xib; sourceTree = "<group>"; };
 		7C11E4D61B3EE551000B4896 /* ToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolView.h; sourceTree = "<group>"; };
 		7C11E4D71B3EE551000B4896 /* ToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolView.m; sourceTree = "<group>"; };
+		7CE5A0381B5E2BFD00DD4D33 /* LuckDialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuckDialView.h; sourceTree = "<group>"; };
+		7CE5A0391B5E2BFD00DD4D33 /* LuckDialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LuckDialView.m; sourceTree = "<group>"; };
+		7CE5A03B1B5E385D00DD4D33 /* LuckDialButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuckDialButton.h; sourceTree = "<group>"; };
+		7CE5A03C1B5E385D00DD4D33 /* LuckDialButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LuckDialButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -395,6 +401,10 @@
 				7C11E4CF1B3EE0A2000B4896 /* ToolView.xib */,
 				7C11E4D61B3EE551000B4896 /* ToolView.h */,
 				7C11E4D71B3EE551000B4896 /* ToolView.m */,
+				7CE5A0381B5E2BFD00DD4D33 /* LuckDialView.h */,
+				7CE5A0391B5E2BFD00DD4D33 /* LuckDialView.m */,
+				7CE5A03B1B5E385D00DD4D33 /* LuckDialButton.h */,
+				7CE5A03C1B5E385D00DD4D33 /* LuckDialButton.m */,
 			);
 			path = Luck;
 			sourceTree = "<group>";
@@ -742,6 +752,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CE5A03A1B5E2BFD00DD4D33 /* LuckDialView.m in Sources */,
 				7C11E4B01B3D47E1000B4896 /* BaseNavigationController.m in Sources */,
 				7C11E3EA1B3AC89F000B4896 /* LotteryNavigationController.m in Sources */,
 				7C11E3F41B3BC8A8000B4896 /* SettingCell.m in Sources */,
@@ -755,6 +766,7 @@
 				7C11E45F1B3D2C1C000B4896 /* AboutSettingViewController.m in Sources */,
 				7C11E4551B3D2977000B4896 /* PushSettingViewController.m in Sources */,
 				7C11E4621B3D2F67000B4896 /* AboutSettingHeaderView.m in Sources */,
+				7CE5A03D1B5E385D00DD4D33 /* LuckDialButton.m in Sources */,
 				7C11E4561B3D2977000B4896 /* ScoreNoticeSettingViewController.m in Sources */,
 				7C11E4A71B3D41FF000B4896 /* HelpViewController.m in Sources */,
 				7C11E4111B3D0F52000B4896 /* SettingItem.m in Sources */,
@@ -965,6 +977,7 @@
 				7C11E3B41B3A770A000B4896 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C11E3B51B3A770A000B4896 /* Build configuration list for PBXNativeTarget "LotteryTests" */ = {
 			isa = XCConfigurationList;
@@ -973,6 +986,7 @@
 				7C11E3B71B3A770A000B4896 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,10 +8,15 @@
 
 #import "LuckViewController.h"
 #import "ToolView.h"
+#import "LuckDialView.h"
+
 
 
 @interface LuckViewController ()
-
+{
+    ToolView * _toolView;
+    LuckDialView * _luckDialView;
+}
 @end
 
 @implementation LuckViewController
@@ -22,6 +27,18 @@
     self.title=@"幸运选号";
     [self setupBackground];
     [self setupToolView];
+    [self setupLuckDialView];
+    
+}
+
+-(void) viewDidAppear:(BOOL)animated
+{
+    [_luckDialView startRotate];
+}
+
+-(void) viewDidDisappear:(BOOL)animated
+{
+    [_luckDialView stopRotate];
 }
 
 -(void) setupBackground
@@ -43,12 +60,26 @@
 
 -(void) setupToolView
 {
-    ToolView * toolView=[ToolView toolView];
+    _toolView=[ToolView toolView];
     CGFloat cx=self.view.frame.size.width*0.5;
-    CGFloat cy=toolView.frame.size.height*0.5+10;
-    toolView.center=CGPointMake(cx, cy);
-    [self.view addSubview:toolView];
+    CGFloat cy=_toolView.frame.size.height*0.5+10;
+    _toolView.center=CGPointMake(cx, cy);
+    [self.view addSubview:_toolView];
     
+}
+
+-(void) setupLuckDialView
+{
+    _luckDialView=[[LuckDialView alloc] init];
+    CGFloat x=(self.view.frame.size.width-286)*0.5;
+    CGFloat y=CGRectGetMaxY(_toolView.frame);
+    CGFloat w=286;
+    CGFloat h=286;
+    _luckDialView.frame=CGRectMake(x,y, w, h);
+    _luckDialView.backgroundColor=[UIColor clearColor];
+   // _luckDialView.backgroundColor=[UIColor blueColor];
+    
+    [self.view addSubview:_luckDialView];
 }
 
 @end

@@ -19,7 +19,6 @@
     [self drawLineDefault];
 }
 
-
 #pragma mark -路径画图
 -(void) drawLineByPath
 {
