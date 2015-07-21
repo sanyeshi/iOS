@@ -18,6 +18,7 @@
        图像的像素=image.size*image.scale
      */
     
+    
     UIImage * image=[self imageForState:UIControlStateNormal];
     CGSize size=image.size;
     CGFloat scale=[UIScreen mainScreen].scale;

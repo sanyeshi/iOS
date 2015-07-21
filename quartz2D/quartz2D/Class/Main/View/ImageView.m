@@ -20,7 +20,13 @@
  */
 - (void)drawRect:(CGRect)rect
 {
-    [self drawBg:rect];
+    UIImage * image=[self cropImage];
+    
+    NSLog(@"%@",NSStringFromCGSize(image.size));
+    NSLog(@"%f",image.scale);
+    
+    [image drawAtPoint:CGPointZero];
+    //[self drawBg:rect];
 }
 
 /*
@@ -88,19 +94,10 @@
    图像裁剪
  */
 -(UIImage *) cropImage
-{
-    //其他的设备(如图形上下文等)是以像素为单位，而UIKit则以点为单位。所以在图像上下文中，裁剪图片时的大小以像素为单位，而不是以点为单位；而在UIKit中的上下文画图，则是以点为单位，但裁剪图片，若是保持原来的分辨率，仍要以像素为单位；
-    //UIImage 的Size属性表示的就是图像的像素。
-    
-    //开启图像上下文
-    UIGraphicsBeginImageContextWithOptions(CGSizeMake(200.0f, 200.0f), NO, 0.0f);
-    //获取图像上下文
-    CGContextRef ctx=UIGraphicsGetCurrentContext();
-    CGContextAddEllipseInRect(ctx,(CGRect){CGPointZero,CGSizeMake(200.0f, 200.0f)});
-    //裁剪，会把之前画的区域裁剪下来
-    CGContextClip(ctx);
+{    //开启图像上下文,指定画布大小为50*50
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(50.0f, 50.0f), NO, 0.0f);
     UIImage * image=[UIImage imageNamed:@"icon"];
-    [image drawInRect:(CGRect){CGPointZero,CGSizeMake(200.0f, 200.0f)}];
+    [image drawInRect:(CGRect){CGPointMake(-50, -50),CGSizeMake(100.0f, 100.0f)}];
     UIImage * croppedImage=UIGraphicsGetImageFromCurrentImageContext();
     //关闭图像上下文
     UIGraphicsEndImageContext();
