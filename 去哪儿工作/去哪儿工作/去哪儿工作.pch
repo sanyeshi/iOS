@@ -1,0 +1,98 @@
+//
+//  去哪儿工作.pch
+//  去哪儿工作
+//
+//  Created by 孙硕磊 on 5/8/15.
+//  Copyright (c) 2015 dhu.cst. All rights reserved.
+//
+
+#ifndef ____________pch
+#define ____________pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <Foundation/Foundation.h>
+//调试输出
+#ifdef DEBUG
+#define Log(...) NSLog(__VA_ARGS__)
+#else
+#define Log(...)
+#endif
+
+//适配
+
+#ifndef iPhone4S
+#define iPhone4S    (([UIScreen mainScreen].bounds.size.width==320&&[UIScreen mainScreen].bounds.size.height==480)?YES:NO)
+#endif
+
+#ifndef iPhone5
+#define iPhone5     ([UIScreen mainScreen].bounds.size.width==320?YES:NO)
+#endif
+
+#ifndef iPhone6
+#define iPhone6     ([UIScreen mainScreen].bounds.size.width==375?YES:NO)
+#endif
+
+#ifndef iPhone6Plus
+#define iPhone6Plus ([UIScreen mainScreen].bounds.size.width==414?YES:NO)
+#endif
+
+//全局属性
+#define RGBColor(r,g,b)                   [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0]
+#define GlobalTintColor                   RGBColor(0,174,239)
+
+
+#define GlobalNavigationBarColor           GlobalTintColor
+#define GlobalNavigationBarTextColor      [UIColor whiteColor]
+
+#define GlobalTabBarColor                 [UIColor whiteColor]
+#define GlobalTablBarTextColor            GlobalTintColor
+
+#define GlobalTableViewBackgroundColor    RGBColor(245, 245, 245)
+#define GlobalCellSelecedColor            RGBColor(240,240,240)
+
+#define GlobalBackgroundColor             [UIColor whiteColor]
+#define GlobalSeparatorHeight             0.5
+#define GlobalSeparatorColor              RGBColor(226,226,226)
+
+
+#define GlobalTinyFont              [UIFont systemFontOfSize:10.0f]
+#define GlobalSmallFont             [UIFont systemFontOfSize:12.0f]
+#define GlobalFont                  [UIFont systemFontOfSize:14.0f]
+#define GlobalBoldFont              [UIFont boldSystemFontOfSize:14.0f]
+#define GlobalBigFont               [UIFont systemFontOfSize:16.0f]
+#define GlobalBigBoldFont           [UIFont boldSystemFontOfSize:16.0f]
+
+
+
+#define GlobalBigFont               [UIFont systemFontOfSize:16.0f]
+
+#define GlobalBlackTextColor        [UIColor blackColor]
+#define GlobalLightBlackTextColor   RGBColor(150,150,150)
+#define GlobalWhiteTextColor        [UIColor whiteColor]
+#define GlobalBackgroundTextColor   RGBColor(150,150,150)
+
+
+//enum
+typedef enum : NSUInteger
+{
+    MyJobTypeApplay,
+    MyJobTypeAccept,
+    MyJobTypeReject
+}MyJobType;
+
+typedef enum : NSUInteger
+{   MyCardTypeDoNot,
+    MyCardTypeDid
+}MyCardType;
+
+typedef enum : NSUInteger
+{   MyFavoriteTypeParttimeJob,
+    MyFavoriteIntern,
+    MyFavoriteTypeRecruitment
+}MyFavoriteType;
+
+
+
+#endif

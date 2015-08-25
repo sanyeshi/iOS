@@ -23,14 +23,14 @@ static NSString * ID=@"ID";
 
 -(void) loadView
 {
-    /*
+    
     UICollectionViewFlowLayout * layout=[[UICollectionViewFlowLayout alloc] init];
     layout.itemSize=CGSizeMake(120,240);
     layout.sectionInset=UIEdgeInsetsMake(20.0f, 0.0f,0.0f, 0.0f);
     layout.minimumLineSpacing=20.0f;
     layout.minimumInteritemSpacing=0.0f;
-     */
-    UICollectionViewWaterFlowLayout * layout=[[UICollectionViewWaterFlowLayout alloc] init];
+
+    //UICollectionViewWaterFlowLayout * layout=[[UICollectionViewWaterFlowLayout alloc] init];
     
     _collectionView=[[UICollectionView alloc] initWithFrame:[UIScreen mainScreen].bounds collectionViewLayout:layout];
     //在指定数据源之前需要注册Cell类
